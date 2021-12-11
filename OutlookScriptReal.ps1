@@ -54,9 +54,10 @@ $Mail.Recipients.Add($confirmedEmail)
 $Mail.Subject = "fyi"
 $Mail.Body = "Here is your PIN number and password, please keep these in a safe place.`n`nPIN: " + $userPIN + "`nPassword: " + "#" + $userPW + $userPIN + "`n`nFrom,`n`nWhoever"
 $Mail.Send()
-Write-Host("Account Email sent`nPassword Email Sent")
+Write-Host("Account Email sent`nPassword Email Sent`nPress any key to run the script again for a new user, or you can close the application.")
+Read-Host
+Clear-Host
 $optionFlag = 1
-$appFlag = 1
 }
 
 #If user selects no, no emails are sent and program restarts
